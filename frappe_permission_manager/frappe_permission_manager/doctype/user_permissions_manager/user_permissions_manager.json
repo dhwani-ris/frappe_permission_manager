@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2025-07-05 09:59:14.327581",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "roles",
+  "apply_to_role",
+  "users",
+  "section_break_hvow",
+  "user_permission_manager_mapper",
+  "section_break_fncj",
+  "help_html"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_permission_manager_mapper",
+   "fieldtype": "Table",
+   "label": "Assign Permissions",
+   "options": "User Permissions Manager Child"
+  },
+  {
+   "depends_on": "eval:!doc.apply_to_role",
+   "fieldname": "users",
+   "fieldtype": "Table MultiSelect",
+   "label": "User",
+   "options": "User Permissions Manager Child User"
+  },
+  {
+   "fieldname": "help_html",
+   "fieldtype": "HTML",
+   "is_virtual": 1,
+   "options": "<div style=\"font-family: sans-serif; max-width: 800px; line-height: 1.6; color: #333;\">\n  <h2 style=\"border-bottom: 2px solid #ddd; padding-bottom: 4px;\">Help</h2>\n  \n  <p style=\"margin-top: 1em;\">\n    This app lets you define exactly what records different users can see and work on. \n    It's useful to restrict data visibility, enforce roles, and keep your business data secure.\n  </p>\n\n  <h3 style=\"color: #2c3e50; margin-top: 1.5em;\">What You Can Do</h3>\n  <ul style=\"padding-left: 20px;\">\n    <li>Assign a record to <strong>just one user</strong> (e.g. only one salesperson sees Customer ABC).</li>\n    <li>Allow <strong>multiple users</strong> to access the same record (like a project or item).</li>\n    <li>Restrict a user to <strong>single values</strong> (e.g. only one Supplier).</li>\n    <li>Assign <strong>multiple values</strong> to a user, covering a list of customers, projects, etc.</li>\n    <li>Apply rules to a <strong>specific doctype</strong> (like Sales Order), or to <strong>all doctypes</strong> where the record appears.</li>\n    <li>Decide if users should also see <strong>linked child records</strong> (like Tasks under a Project).</li>\n  </ul>\n\n  <h3 style=\"color: #2c3e50; margin-top: 1.5em;\">How to Fill This Form</h3>\n  <ol style=\"padding-left: 20px;\">\n    <li><strong>Users:</strong> Select one or more users in the table who should get these permissions.</li>\n    <li><strong>Doctype:</strong> Choose which type of document you want to restrict, e.g. Customer, Supplier, Project.</li>\n    <li><strong>Record(s):</strong> Pick the exact records (values) that the selected users can access.</li>\n    <li><strong>Apply to All Doctypes:</strong> Check if you want these permissions to apply everywhere the record is linked. Uncheck to limit to the selected doctype only.</li>\n    <li><strong>Hide Descendants:</strong> Turn this on if you want to block access to child records (like Addresses under a Customer).</li>\n    <li><strong>Save:</strong> When done, save the document. The rules will take effect immediately.</li>\n  </ol>\n\n</div>\n"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.roles",
+   "fieldname": "apply_to_role",
+   "fieldtype": "Check",
+   "label": "Apply To Role?"
+  },
+  {
+   "fieldname": "section_break_hvow",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_fncj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "roles",
+   "fieldtype": "Table MultiSelect",
+   "label": "Role",
+   "options": "User Permissions Manager Child Role"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-08 13:57:29.668714",
+ "modified_by": "Administrator",
+ "module": "Frappe Permission Manager",
+ "name": "User Permissions Manager",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_name_in_global_search": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

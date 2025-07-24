@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-08 11:57:25.582580",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "role_section",
+  "role"
+ ],
+ "fields": [
+  {
+   "fieldname": "role_section",
+   "fieldtype": "Section Break",
+   "label": "Role"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Link",
+   "label": "Role",
+   "options": "Role"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-08 11:57:41.397523",
+ "modified_by": "Administrator",
+ "module": "Frappe Permission Manager",
+ "name": "User Permissions Manager Child Role",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
