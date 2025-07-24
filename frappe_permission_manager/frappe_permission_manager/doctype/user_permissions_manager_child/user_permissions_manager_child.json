@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "creation": "2025-07-05 09:55:50.823910",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "allow",
+  "for_value",
+  "column_break_3",
+  "is_default",
+  "advanced_control_section",
+  "apply_to_all_doctypes",
+  "applicable_for",
+  "column_break_9",
+  "hide_descendants"
+ ],
+ "fields": [
+  {
+   "fieldname": "allow",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Allow",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "for_value",
+   "fieldtype": "Dynamic Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "For Value",
+   "options": "allow",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Is Default"
+  },
+  {
+   "fieldname": "advanced_control_section",
+   "fieldtype": "Section Break",
+   "label": "Advanced Control"
+  },
+  {
+   "default": "1",
+   "fieldname": "apply_to_all_doctypes",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Apply To All Document Types"
+  },
+  {
+   "depends_on": "eval:!doc.apply_to_all_doctypes",
+   "fieldname": "applicable_for",
+   "fieldtype": "Link",
+   "label": "Applicable For",
+   "mandatory_depends_on": "eval:!doc.apply_to_all_doctypes",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Hide descendant records of <b>For Value</b>.",
+   "fieldname": "hide_descendants",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Hide Descendants"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-08 11:34:19.079704",
+ "modified_by": "Administrator",
+ "module": "Frappe Permission Manager",
+ "name": "User Permissions Manager Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
