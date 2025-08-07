@@ -1,6 +1,6 @@
 import frappe
 from frappe.tests.utils import FrappeTestCase
-from user_permissions_manager.user_permissions_manager.doctype.user_permissions_manager.user_permissions_manager import (
+from frappe_permission_manager.frappe_permission_manager.doctype.user_permissions_manager.user_permissions_manager import (
     apply_bulk_user_permissions, delete_user_permissions
 )
 
