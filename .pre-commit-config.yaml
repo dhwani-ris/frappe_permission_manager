@@ -8,7 +8,7 @@ repos:
     rev: v5.0.0
     hooks:
       - id: trailing-whitespace
-        files: "frappe_permission_manager.*"
+        files: "frappe_desk_theme.*"
         exclude: ".*json$|.*txt$|.*csv|.*md|.*svg"
       - id: check-merge-conflict
       - id: check-ast
@@ -38,11 +38,11 @@ repos:
         # Ignore any files that might contain jinja / bundles
         exclude: |
             (?x)^(
-                frappe_permission_manager/public/dist/.*|
+                frappe_desk_theme/public/dist/.*|
                 .*node_modules.*|
                 .*boilerplate.*|
-                frappe_permission_manager/templates/includes/.*|
-                frappe_permission_manager/public/js/lib/.*
+                frappe_desk_theme/templates/includes/.*|
+                frappe_desk_theme/public/js/lib/.*
             )$
 
 
@@ -55,12 +55,12 @@ repos:
         # Ignore any files that might contain jinja / bundles
         exclude: |
             (?x)^(
-                frappe_permission_manager/public/dist/.*|
+                frappe_desk_theme/public/dist/.*|
                 cypress/.*|
                 .*node_modules.*|
                 .*boilerplate.*|
-                frappe_permission_manager/templates/includes/.*|
-                frappe_permission_manager/public/js/lib/.*
+                frappe_desk_theme/templates/includes/.*|
+                frappe_desk_theme/public/js/lib/.*
             )$
 
 ci:
